@@ -1,0 +1,88 @@
+:root{
+    --blue1: #00CEFF;
+    --blue2: #68C2FF;
+    --blue3: #0168CD;
+    --blue4: #421CEF;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.org_1{
+    width: 80%;
+    margin: auto;
+}
+
+header{
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.344);
+}
+
+.dvheader{
+    display: flex;
+    align-items: center;
+}
+
+#logo{
+    width: 30%;
+    padding: 5px;
+}
+
+#logo span{
+    font-size: 35px;
+}
+
+.blue{
+    color: var(--blue3);
+}
+
+#logo p{
+    margin: 10px 0 0 0;
+    font-size: 20px;
+}
+
+header nav{
+    width: 70%;
+    margin-top: 15px;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+nav a{
+    text-decoration: none;
+    color: rgb(24, 22, 22);
+    font-size: 18px;
+    transition-duration: 0.5s;
+}
+
+nav a:hover{
+    color: var(--blue3);
+}
+
+nav li:hover::after{
+    width: 100%;
+}
+
+nav ul li::after{
+    content: '';
+    display: block;
+    height: 5px;
+    margin-top: 3px;
+    width: 0%;
+    background-color: var(--blue4);
+    transition: ease-in-out 0.5s;
+}
+
+
+/* Barrinha dos itens https://www.youtube.com/watch?v=5jWQVhJxU7c */
