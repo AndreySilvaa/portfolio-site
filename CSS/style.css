@@ -3,6 +3,9 @@
     --blue2: #68C2FF;
     --blue3: #0168CD;
     --blue4: #421CEF;
+    --black1: #2a2630;
+    --yellow1: #CAA42D;
+    --green1: #24A215;
 }
 
 *{
@@ -20,9 +23,12 @@ body{
 }
 
 header{
+    position: fixed;
     display: flex;
     width: 100%;
     border-bottom: 1px solid rgba(0, 0, 0, 0.344);
+    z-index: 9;
+    background-color: white;
 }
 
 .dvheader{
@@ -86,3 +92,65 @@ nav ul li::after{
 
 
 /* Barrinha dos itens https://www.youtube.com/watch?v=5jWQVhJxU7c */
+
+#home{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+#background{
+    position: absolute;
+    width: 100%;
+    background-image: url(../imgs/background2.jpg);
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: opacity(0.7) blur(1px);
+}
+
+.dark1{
+    color: var(--black1);
+}
+
+#apresentacao{
+    height: 370px;
+    border: 1px solid;
+    display: flex;
+}
+
+#infopessoal{
+    border: 1px solid;
+    width: 60%;
+}
+
+.fa-envelope{
+   color: var(--yellow1); 
+}
+
+.fa-whatsapp{
+    color: var(--green1);
+}
+
+#imgdrey{
+    border: 1px solid;
+    width: 40%;
+}
+
+#infopessoal ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    width: 80%;
+    padding: 0;
+}
+
+#infopessoal ul li{
+    margin-right: 30px;
+}
+
+#infopessoal a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
