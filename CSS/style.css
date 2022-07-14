@@ -14,6 +14,7 @@
 
 html{
     scroll-behavior: smooth;
+    scroll-padding-top: 40px;
 }
 
 body{
@@ -144,8 +145,8 @@ nav ul li::after{
     font-size: 17px;
 }
 
-.fa-envelope{
-   color: var(--yellow1); 
+.fa-linkedin{
+   color: #0a66c2; 
 }
 
 .fa-whatsapp{
@@ -185,6 +186,10 @@ nav ul li::after{
     color: rgb(0, 0, 0);
 }
 
+#projetos{
+    background-color: white;
+}
+
 #div-projects{
     padding: 30px 0px 30px 0px;
 }
@@ -198,7 +203,7 @@ nav ul li::after{
     margin-bottom: 40px;
 }
 
-#div-projects span{
+.text-format01{
     font-size: 30px;
     border-bottom: 2px solid #CD669A;
 }
@@ -211,19 +216,20 @@ nav ul li::after{
     row-gap: 40px;
 }
 
-.list-projects div{
+.project{
     cursor: pointer;
     border-radius: 18px;
     box-shadow: 0px 0px 3px 0px black;
-    height: 230px;
+    height: 300px;
+    overflow: hidden;
 }
 
 .list-projects img{
     width: 100%;
-    height: 100%;
+    height: 80%;
     border-radius: 18px;
     outline: 2px solid rgba(255, 255, 255, 0.77);
-    outline-offset: -10px;
+    outline-offset: -5px;
     outline-style: groove;
     transition: all 0.6s;
 }
@@ -231,4 +237,221 @@ nav ul li::after{
 .list-projects img:hover{
     transform: scale(1.1);
     outline-offset: 2px;
+    outline: none;
+}
+
+.desc{
+    border: 0px solid;
+    padding: 8px;
+    margin: 7px 0px 0px;
+    text-align: center;
+    cursor: initial;
+    font-size: 15px;
+    color: white;
+    background-color: var(--black1);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    height: 18%;
+    width: 100%;
+}
+
+#bt-projetos{
+    display: block;
+    margin: 80px auto;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: 0px 7px 0px 0px #959595;
+    background-color: var(--blue2);
+    color: #ffffff;
+    font-size: 16px;
+    text-shadow: 1px 1px 1px #969292;
+}
+
+#bt-projetos:active{
+    box-shadow: 0px 4px 0px 0px #5e5e5e;
+    transform: translateY(5px);
+}
+
+#habilidades{
+    background-color: #F8F9FA;
+    border-top: 1px solid #00000024;
+    height: 90vh;
+    padding: 30px 0px 30px 0px;
+}
+
+#div-habilidades{
+    height: 85%;
+}
+
+.list-habilidades{
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(2, 222px);
+    height: 80%;
+    justify-content: center;
+    margin: 50px;
+    background-color: rgb(42, 38, 48);
+    padding: 15px;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0px 0px 2px 3px black;
+    background-image: linear-gradient( 115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7) ), url('../imgs/habilidades_background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.hab{
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 15px 0 0 0;
+}
+
+.b-bottom{
+    border-bottom: 1px solid;
+}
+
+.b-direita-cima::after{
+    content: '';
+    position: absolute;
+    bottom: 25%;
+    left: 71%;
+    width: 60%;
+    height: 1px;
+    background-color: #ffffff;
+    transform: rotate(90deg);
+}
+
+.b-direita-baixo::after{
+    content: '';
+    position: absolute;
+    top: 28%;
+    left: 71%;
+    width: 60%;
+    height: 1px;
+    background-color: #ffffff;
+    transform: rotate(90deg);
+}
+
+.img-icon{
+    width: 75%;
+    height: 75%;
+    background-image: linear-gradient(45deg, #68c2ff33, #0168cd45);
+    border-radius: 15px;
+}
+
+.img-icon img{
+    width: 60%;
+    margin-top: 30px;
+}
+
+/* CERTIFICAÇÕES */
+
+#certificacoes{
+    border-top: 1px solid rgba(0, 0, 0, 0.14);
+    padding: 30px 0px 30px 0px;
+}
+
+#div-certificacoes ul li{
+    margin: 55px 0px;
+}
+
+#div-certificacoes ul li::before{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: -3px;
+    border-width: 7px;
+    border-style: solid;
+    border-color: #8464ff white #8464ff white;
+}
+
+#div-certificacoes ul{
+    list-style-type: none;
+    position: relative;
+}
+
+#div-certificacoes ul::before{
+    content: '';
+    position: absolute;
+    display: inline;
+    width: 6px;
+    height: 100%;
+    background-color: #d9d9d95a;
+    left: 1px;
+}
+
+.certificado{
+    display: flex;
+}
+
+.certificado a{
+    text-decoration: none;
+    border: 1px solid;
+    color: rgb(30, 29, 29);
+    padding: 5px 10px;
+    font-size: 18px;
+    border-radius: 20px;
+    transition: 1s;
+}
+
+.certificado a:hover{
+    background-color: #1B1B32;
+    color: white;
+}
+
+.certificado_titulo{
+    width: 90%;
+}
+
+.certificado_titulo h2{
+    margin-top: 0;
+}
+
+.certificado_depoimento{
+    width: 100%;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.certificado_depoimento p{
+    margin-top: 0;
+}
+
+/* CONTATO */
+
+#contato{
+    background-color: #F8F9FA;
+    border-top: 1px solid rgba(0, 0, 0, 0.14);
+    padding: 30px 0px 30px 0px;
+}
+
+#container_contato{
+    border: 1px solid;
+    height: 60vh;
+    margin: 40px 0px;
+    display: flex;
+}
+
+#div-form{
+    border: 1px solid;
+    flex-grow: 1;
+}
+
+#google-maps{
+    border: 1px solid;
+    width: 50%;
+}
+
+footer {
+    background-color: #404040;
+    color: white;
+    padding: 15px;
+    text-align: center;
 }
