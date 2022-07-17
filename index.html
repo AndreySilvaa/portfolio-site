@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/698b380f29.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -52,15 +54,23 @@
             <h2><span class="text-format01">PROJETOS</span></h2>
             <p>Aqui estão alguns dos sites que eu já desenvolvir:</p>
             <div class="list-projects">
-                <div class="project"><a href="https://andreysilvaa.github.io/Candy-Shop/treino.html" target="_blank"><img src="imgs/site-de-doces.png" alt="imagem do projeto"></a><div class="desc">Site de loja de doces (one page)</div></div>
-                <div class="project"><a href="https://andreysilvaa.github.io/Weather-App/" target="_blank"><img src="imgs/app-de-clima.png" alt="imagem do projeto" target="_blank"></a><div class="desc">Checagem de condições climáticas</div></div>
-                <div class="project"><a href="https://andreysilvaa.github.io/Projeto-site-do-zero/" target="_blank"><img src="imgs/site-do-zero.png" alt="imagem do projeto"></a><div class="desc">Modelo simples de site one page</div></div>
-                <div class="project"><a href="https://andreysilvaa.github.io/photographer-website/site.html" target="_blank"><img src="imgs/site-photograpy.png" alt="imagem do projeto" target="_blank"></a><div class="desc">Site de fotografia (one page)</div></div>
-                <div class="project"><a href="https://andreysilvaa.github.io/Music-Website/treino.html" target="_blank"><img src="imgs/site-music.png" alt="imagem do projeto"></a><div class="desc">Site de música (one page)</div></div>
-                <div class="project"><a href="https://andreysilvaa.github.io/Flashcard-Project/" target="_blank"><img src="imgs/flashcards-creator.png" alt="imagem do projeto"></a><div class="desc">Gerador de flashcards</div></div>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide"><a href="https://andreysilvaa.github.io/Candy-Shop/treino.html" target="_blank"><img src="imgs/site-de-doces.png" alt="imagem do projeto"></a><div class="desc">Site de loja de doces</div></div>
+                      <div class="swiper-slide"><a href="https://andreysilvaa.github.io/Weather-App/" target="_blank"><img src="imgs/app-de-clima.png" alt="imagem do projeto" target="_blank"></a><div class="desc">Aplicativo de tempo</div></div>
+                      <div class="swiper-slide"><a href="https://andreysilvaa.github.io/Projeto-site-do-zero/" target="_blank"><img src="imgs/site-do-zero.png" alt="imagem do projeto"></a><div class="desc">Modelo simples de site one page</div></div>
+                      <div class="swiper-slide"><a href="https://andreysilvaa.github.io/photographer-website/site.html" target="_blank"><img src="imgs/site-photograpy.png" alt="imagem do projeto" target="_blank"></a><div class="desc">Site de fotografia</div></div>
+                      <div class="swiper-slide"><a href="https://andreysilvaa.github.io/Music-Website/treino.html" target="_blank"><img src="imgs/site-music.png" alt="imagem do projeto"></a><div class="desc">Site de música</div></div>
+                      <div class="swiper-slide"><a href="https://andreysilvaa.github.io/Flashcard-Project/" target="_blank"><img src="imgs/flashcards-creator.png" alt="imagem do projeto"></a><div class="desc">Gerador de flashcards</div></div>
+                      <div class="swiper-slide">Slide 7</div>
+                      <div class="swiper-slide">Slide 8</div>
+                      <div class="swiper-slide">Slide 9</div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                  </div>
             </div>
-
-            <button id="bt-projetos">Carregar Mais</button>
         </div>
     </section>
 
@@ -139,5 +149,8 @@
     <footer>
         <small>© Copyright 2022 Andrey Silva. All Rights Reserved.</small>
     </footer>
+
+
+    <script src="JS/app.js"></script>
 </body>
 </html>
