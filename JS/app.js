@@ -1,4 +1,9 @@
 window.addEventListener('load', () =>{
+
+  const navicon = document.getElementById("icon")
+  const menu = document.getElementById("menu")
+
+  //SLIDER
     var swiper = new Swiper(".mySwiper", {
         slidesPerView: 3,
         spaceBetween: 30,
@@ -14,4 +19,11 @@ window.addEventListener('load', () =>{
           prevEl: ".swiper-button-prev",
         },
       });
+
+
+    //Show/Hide MENU
+    navicon.addEventListener("click", () =>{
+      menu.classList.toggle("showmenu")
+      navicon.classList.toggle("fa-times")
+    })
 })
