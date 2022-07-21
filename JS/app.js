@@ -20,10 +20,24 @@ window.addEventListener('load', () =>{
         },
       });
 
+      if(window.innerWidth < 500){
+        swiper.params.slidesPerView = 1
+        swiper.params.slidesPerGroup = 1
+        
+      }else if(window.innerWidth < 1030){
+        swiper.params.slidesPerView = 2
+        swiper.params.slidesPerGroup = 1
+      }
+      
 
     //Show/Hide MENU
     navicon.addEventListener("click", () =>{
       menu.classList.toggle("showmenu")
       navicon.classList.toggle("fa-times")
     })
+
+    window.onscroll = (e) =>{
+      menu.classList.remove("showmenu")
+      navicon.classList.remove("fa-times")
+    }
 })
