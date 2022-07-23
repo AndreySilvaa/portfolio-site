@@ -299,11 +299,8 @@ nav a::after{
     border-bottom: 2px solid #CD669A;
 }
 
-/*
+/* HABILIDADES */
 
-
-
-*/
 #habilidades{
     background-color: #F8F9FA;
     border-top: 1px solid #00000024;
@@ -312,14 +309,15 @@ nav a::after{
 }
 
 #div-habilidades{
-    height: 85%;
+    height: 80vh;
 }
 
 .list-habilidades{
     display: grid;
-    grid-template-columns: repeat(3, 200px);
-    grid-template-rows: repeat(2, 222px);
-    height: 80%;
+    grid-template-columns: repeat(3, 30%);
+    grid-template-rows: repeat(2, 40%);
+    row-gap: 8%;
+    height: 85%;
     justify-content: center;
     margin: 50px;
     background-color: rgb(42, 38, 48);
@@ -331,6 +329,12 @@ nav a::after{
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    align-content: center;
+}
+
+.list-habilidades p{
+    margin: 0;
+    margin-top: 10px;
 }
 
 .hab{
@@ -339,13 +343,15 @@ nav a::after{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-evenly;
     padding: 15px 0 0 0;
 }
 
+/*
 .b-bottom{
     border-bottom: 1px solid;
 }
+
 
 .b-direita-cima::after{
     content: '';
@@ -368,17 +374,16 @@ nav a::after{
     background-color: #ffffff;
     transform: rotate(90deg);
 }
-
+*/
 .img-icon{
     width: 75%;
-    height: 75%;
     background-image: linear-gradient(45deg, #68c2ff33, #0168cd45);
     border-radius: 15px;
 }
 
 .img-icon img{
     width: 60%;
-    margin-top: 30px;
+    padding: 10px;
 }
 
 /* CERTIFICAÇÕES */
@@ -419,6 +424,7 @@ nav a::after{
 
 .certificado{
     display: flex;
+    justify-content: space-between;
 }
 
 .certificado a{
@@ -437,7 +443,7 @@ nav a::after{
 }
 
 .certificado_titulo{
-    width: 90%;
+    flex: 0 1 50%;
 }
 
 .certificado_titulo h2{
@@ -445,7 +451,7 @@ nav a::after{
 }
 
 .certificado_depoimento{
-    width: 100%;
+    flex: 0 1 45%;
     font-size: 18px;
     line-height: 25px;
 }
@@ -470,7 +476,7 @@ nav a::after{
 
 #google-maps{
     border: 1px solid;
-    width: 50%;
+    flex: 0 1 50%;
 }
 
 #div-form h3{
@@ -479,7 +485,7 @@ nav a::after{
 }
 
 #div-form{
-    width: 50%;
+    flex: 0 1 50%;
     padding: 0 4%;
     background-color: var(--black1);
 }
@@ -639,6 +645,27 @@ footer {
     .swiper-pagination{
         display: none !important;
     }
+
+    /* HABILIDADES */
+
+    .list-habilidades{
+        row-gap: 0;
+        grid-template-columns: repeat(2, 40%);
+        grid-template-rows: repeat(2, 35%);
+    }
+
+    .list-habilidades p {
+        margin-top: 0;
+    }
+}
+
+@media(max-width: 700px) {
+    .list-habilidades {
+        margin: 10% 0;
+        row-gap: 5%;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(2, 30%);
+    }
 }
 
 
@@ -661,5 +688,45 @@ footer {
     #imgdrey img {
         width: 150px;
         height: 150px;
+    }
+
+    /* HABILIDADES */
+
+    .img-icon img {
+        width: 80%;
+    }
+
+    /* CERTIFICAÇÕES */
+
+    .certificado {
+        flex-direction: column;
+    }
+
+    .certificado a {
+        font-size: 15px;
+    }
+
+    .certificado_titulo p{
+        font-size: 14px;
+    }
+
+    /* CONTATO */
+
+    #container_contato {
+        height: auto;
+        flex-direction: column;
+    }
+
+    #div-form{
+        margin-bottom: 20px;
+        flex: 0 1 50%;
+    }
+
+    form{
+        margin-bottom: 20px;
+    }
+
+    #google-maps{
+        flex: 0 1 50%;
     }
 }
