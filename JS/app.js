@@ -1,7 +1,12 @@
 window.addEventListener('load', () =>{
 
+  let body = document.getElementsByTagName("body")[0]
   const navicon = document.getElementById("icon")
   const menu = document.getElementById("menu")
+  const dvProjects = document.querySelectorAll("#div-projects > h2, #div-projects > p")
+  const slider = document.getElementsByClassName("list-projects")[0]
+  const habP = document.querySelector("#div-habilidades h2")
+  
 
   //SLIDER
     var swiper = new Swiper(".mySwiper", {
@@ -39,5 +44,24 @@ window.addEventListener('load', () =>{
     window.onscroll = (e) =>{
       menu.classList.remove("showmenu")
       navicon.classList.remove("fa-times")
+    }
+
+    
+    // ANIMAÇÕES
+
+    window.onscroll = (e) =>{
+      if(window.scrollY > 200){
+        Array.from(dvProjects).forEach((el) =>{
+          el.classList.add("left_animation")
+        })
+      }
+
+      if(window.scrollY > 500){
+        slider.classList.add("right_animation")
+      }
+
+      if(window.scrollY > 800){
+        habP.classList.add("left_animation")
+      }
     }
 })

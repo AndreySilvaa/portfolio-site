@@ -21,6 +21,7 @@ html{
 body{
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 .org_1{
@@ -190,12 +191,13 @@ nav a::after{
     display: flex;
     align-items: center;
     height: 100vh;
+    overflow: hidden;
 }
 
 #background{
     position: absolute;
     width: 100%;
-    background-image: url(../imgs/background2.jpg);
+    background-image: url(../imgs/prog2.jpg);
     height: 100%;
     z-index: -1;
     background-size: cover;
@@ -214,11 +216,11 @@ nav a::after{
 }
 
 #infopessoal{
-    
     width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    animation: right_fadeIn 1.2s;
 }
 
 #infopessoal h1{
@@ -242,7 +244,7 @@ nav a::after{
 }
 
 #imgdrey{
-    
+    animation: left_fadeIn 1.2s;
     width: 40%;
     display: flex;
     justify-content: center;
@@ -287,11 +289,17 @@ nav a::after{
 
 #div-projects h2{
     margin-bottom: 40px;
+    opacity: 0;
 }
 
 #div-projects p{
     font-size: 20px;
     margin-bottom: 40px;
+    opacity: 0;
+}
+
+.list-projects{
+    opacity: 0;
 }
 
 .text-format01{
@@ -729,4 +737,28 @@ footer {
     #google-maps{
         flex: 0 1 50%;
     }
+}
+
+
+/* Animações */
+
+
+.right_animation{
+    animation: right_fadeIn 1.2s;
+    opacity: 1 !important;
+}
+
+.left_animation{
+    animation: left_fadeIn 1.2s;
+    opacity: 1 !important;
+}
+
+@keyframes right_fadeIn{
+    0% {transform: translateX(-50%); opacity: 0;}
+    100%{transform: translateX(0); opacity: 1;}
+}
+
+@keyframes left_fadeIn{
+    0% {transform: translateX(50%); opacity: 0;}
+    100%{transform: translateX(0); opacity: 1;}
 }
