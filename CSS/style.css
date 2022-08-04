@@ -220,7 +220,7 @@ nav a::after{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    animation: right_fadeIn 1.2s;
+    animation: right_fadeIn 2s;
 }
 
 #infopessoal h1{
@@ -244,7 +244,7 @@ nav a::after{
 }
 
 #imgdrey{
-    animation: left_fadeIn 1.2s;
+    animation: left_fadeIn 2s;
     width: 40%;
     display: flex;
     justify-content: center;
@@ -320,6 +320,10 @@ nav a::after{
     height: 80vh;
 }
 
+#div-habilidades h2{
+    opacity: 0;
+}
+
 .list-habilidades{
     display: grid;
     grid-template-columns: repeat(3, 30%);
@@ -338,6 +342,7 @@ nav a::after{
     background-attachment: fixed;
     background-repeat: no-repeat;
     align-content: center;
+    opacity: 0;
 }
 
 .list-habilidades p{
@@ -401,8 +406,13 @@ nav a::after{
     padding: 30px 0px 30px 0px;
 }
 
+#div-certificacoes > h2{
+    opacity: 0;
+}
+
 #div-certificacoes ul li{
     margin: 55px 0px;
+    opacity: 0;
 }
 
 #div-certificacoes ul li::before{
@@ -476,6 +486,10 @@ nav a::after{
     padding: 30px 0px 30px 0px;
 }
 
+#div_contato h2{
+    opacity: 0;
+}
+
 #container_contato{
     height: 60vh;
     margin: 40px 0px;
@@ -485,6 +499,7 @@ nav a::after{
 #google-maps{
     border: 1px solid;
     flex: 0 1 50%;
+    opacity: 0;
 }
 
 #div-form h3{
@@ -496,6 +511,7 @@ nav a::after{
     flex: 0 1 50%;
     padding: 0 4%;
     background-color: var(--black1);
+    opacity: 0;
 }
 
 form{
@@ -574,11 +590,12 @@ footer {
         position: absolute;
         top: 100%;
         left: 0;
-        background-color: white;
+        background-color: #eaf3ff;
         flex-direction: column;
         align-items: center;
         padding: 15px;
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        border-bottom: 10px solid #00000021;
     }
 
     .showmenu{
@@ -749,8 +766,18 @@ footer {
 }
 
 .left_animation{
-    animation: left_fadeIn 1.2s;
+    animation: left_fadeIn 2s;
     opacity: 1 !important;
+}
+
+.fadeIn{
+    animation: fadeIn 3s;
+    opacity: 1 !important;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100%{opacity: 1;}
 }
 
 @keyframes right_fadeIn{
