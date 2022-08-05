@@ -302,6 +302,20 @@ nav a::after{
     opacity: 0;
 }
 
+.filter{
+    display: flex;
+    padding: 15px 0;
+}
+
+.filter span{
+    font-size: 22px;
+    padding: 0 10px;
+}
+
+.filter select{
+    cursor: pointer;
+}
+
 .text-format01{
     font-size: 30px;
     border-bottom: 2px solid #CD669A;
@@ -491,17 +505,48 @@ nav a::after{
 }
 
 #container_contato{
-    height: 60vh;
+    height: auto;
     margin: 40px 0px;
     display: flex;
+    flex-direction: column;
 }
 
 #google-maps{
     border: 1px solid;
-    flex: 0 1 50%;
     opacity: 0;
 }
 
+#contacts{
+    padding: 30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+:where(#contacts) .whatsapp, .email{
+    text-align: center;
+    box-shadow: 0px 0px 2px 0px #00000069;
+    padding: 10px;
+    flex: 0 1 30%;
+    background: white;
+    word-wrap: break-word;
+}
+
+#contacts a{
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(40, 40, 40);
+}
+
+#contacts a:hover{
+    color: red;
+}
+
+.fa-envelope{
+    color: #E8BB30;
+}
+
+/*
 #div-form h3{
     text-align: center;
     color: #d2caf7;
@@ -568,7 +613,7 @@ form{
     background-color: #d2caf7;
     color: var(--black1);
 }
-
+*/
 footer {
     background-color: #404040;
     color: white;
@@ -690,6 +735,15 @@ footer {
         row-gap: 5%;
         grid-template-columns: repeat(2, 50%);
         grid-template-rows: repeat(2, 30%);
+    }
+
+    /* CONTATO */
+    #contacts{
+        flex-direction: column;
+    }
+
+    :where(#contacts) .whatsapp, .email {
+        margin: 10px 0;
     }
 }
 

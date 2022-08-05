@@ -11,6 +11,8 @@ window.addEventListener('load', () =>{
   const certificados = document.querySelectorAll("#div-certificacoes li")
   const contH2 = document.querySelector("#div_contato h2")
   const contDvs = document.querySelectorAll("#container_contato > div")
+  const filter = document.querySelector(".filter select")
+  const projects = document.querySelectorAll(".swiper-wrapper > div")
   
 
   //SLIDER
@@ -46,16 +48,8 @@ window.addEventListener('load', () =>{
       navicon.classList.toggle("fa-times")
     })
 
-    /*
-    window.onscroll = (e) =>{
-      menu.classList.remove("showmenu")
-      navicon.classList.remove("fa-times")
-    }
-    */
-
     
     // ANIMAÇÕES
-    console.log(contDvs)
     window.onscroll = (e) =>{
       //Show/Hide MENU
       menu.classList.remove("showmenu")
