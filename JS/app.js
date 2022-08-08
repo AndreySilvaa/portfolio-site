@@ -55,6 +55,8 @@ window.addEventListener('load', () =>{
       menu.classList.remove("showmenu")
       navicon.classList.remove("fa-times")
 
+      
+      //console.log(window.innerHeight)
       //FADE IN
       if(window.scrollY > 200){
         Array.from(dvProjects).forEach((el) =>{
@@ -62,39 +64,39 @@ window.addEventListener('load', () =>{
         })
       }
 
-      if(window.scrollY > 500){
+      if(window.scrollY >= (slider.offsetTop-(window.innerHeight/2))){
         slider.classList.add("right_animation")
       }
 
-      if(window.scrollY > 800){
+      if(window.scrollY >= (habP.offsetTop-(window.innerHeight/2))){
         habP.classList.add("left_animation")
       }
 
-      if(window.scrollY > 1250){
+      if(window.scrollY >= (habDiv.offsetTop-(window.innerHeight/2))){
         habDiv.classList.add("right_animation")
       }
 
-      if(window.scrollY > 1600){
+      if(window.scrollY >= (certH2.offsetTop-(window.innerHeight/2))){
         certH2.classList.add("left_animation")
       }
 
-      if(window.scrollY > 1800){
+      if(window.scrollY >= (certificados[0].offsetTop-(window.innerHeight/2))){
         certificados[0].classList.add("fadeIn")
       }
-
-      if(window.scrollY > 2000){
+     
+      if(window.scrollY >= (certificados[1].offsetTop-(window.innerHeight/2))){
         certificados[1].classList.add("fadeIn")
       }
 
-      if(window.scrollY > 2300){
+      if(window.scrollY >= (contH2.offsetTop-(window.innerHeight/2))){
         contH2.classList.add("left_animation")
       }
 
-      if(window.scrollY > 2400){
+      if(window.scrollY >= (contDvs[0].offsetTop-(window.innerHeight/2))){
         contDvs[0].classList.add("fadeIn")
       }
-
-      if(window.scrollY > 2500){
+      console.log(contDvs[0])
+      if(window.scrollY >= (contDvs[1].offsetTop-(window.innerHeight/2))){
         contDvs[1].classList.add("fadeIn")
       }
     }

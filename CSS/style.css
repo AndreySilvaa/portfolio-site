@@ -441,7 +441,7 @@ nav a::after{
 
 #div-certificacoes ul{
     list-style-type: none;
-    position: relative;
+    /*position: relative;*/
 }
 
 #div-certificacoes ul::before{
@@ -520,6 +520,7 @@ nav a::after{
     padding: 30px;
     display: flex;
     justify-content: space-evenly;
+    opacity: 0;
 }
 
 :where(#contacts) .whatsapp, .email{
