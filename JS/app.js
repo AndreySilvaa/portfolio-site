@@ -81,11 +81,11 @@ window.addEventListener('load', () =>{
       }
 
       if(window.scrollY >= (certificados[0].offsetTop-(window.innerHeight/2))){
-        certificados[0].classList.add("fadeIn")
+        certificados[0].classList.add("right_animation")
       }
      
       if(window.scrollY >= (certificados[1].offsetTop-(window.innerHeight/2))){
-        certificados[1].classList.add("fadeIn")
+        certificados[1].classList.add("left_animation")
       }
 
       if(window.scrollY >= (contH2.offsetTop-(window.innerHeight/2))){
@@ -93,11 +93,11 @@ window.addEventListener('load', () =>{
       }
 
       if(window.scrollY >= (contDvs[0].offsetTop-(window.innerHeight/2))){
-        contDvs[0].classList.add("fadeIn")
+        contDvs[0].classList.add("left_animation")
       }
       console.log(contDvs[0])
       if(window.scrollY >= (contDvs[1].offsetTop-(window.innerHeight/2))){
-        contDvs[1].classList.add("fadeIn")
+        contDvs[1].classList.add("right_animation")
       }
     }
 })

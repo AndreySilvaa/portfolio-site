@@ -321,6 +321,10 @@ nav a::after{
     border-bottom: 2px solid #CD669A;
 }
 
+.breve{
+    border: 1px solid rgba(0, 0, 0, 0.456);
+}
+
 /* HABILIDADES */
 
 #habilidades{
@@ -429,6 +433,11 @@ nav a::after{
     opacity: 0;
 }
 
+#div-certificacoes ul li::marker{
+    margin: 55px 0px;
+    opacity: 0;
+}
+/*
 #div-certificacoes ul li::before{
     content: '';
     display: inline-block;
@@ -438,12 +447,14 @@ nav a::after{
     border-style: solid;
     border-color: #8464ff white #8464ff white;
 }
-
+*/
 #div-certificacoes ul{
-    list-style-type: none;
+    list-style-image: url(../imgs/checkOk2.png);
+    list-style-position: outside;
     /*position: relative;*/
 }
 
+/*
 #div-certificacoes ul::before{
     content: '';
     position: absolute;
@@ -453,7 +464,7 @@ nav a::after{
     background-color: #d9d9d95a;
     left: 1px;
 }
-
+*/
 .certificado{
     display: flex;
     justify-content: space-between;
