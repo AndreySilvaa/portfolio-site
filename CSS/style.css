@@ -410,6 +410,10 @@ nav a::after{
     width: 75%;
     background-image: linear-gradient(45deg, #68c2ff33, #0168cd45);
     border-radius: 15px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .img-icon img{
